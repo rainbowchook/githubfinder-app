@@ -23,10 +23,6 @@ function UserSearch() {
         }
     }
 
-    const clearUsers = () => {
-        dispatch({type: 'CLEAR_USERS'})
-    }
-
   return (
     <div className='grid grid-cols-1 xl:grid-cols-2 lg: grid-cols-2 md: grid-cols-2 mb-8 gap-8'>
         <div>
@@ -51,7 +47,7 @@ function UserSearch() {
         </div>
         {users.length > 0 && (
             <div>
-                <button onClick={() =>  dispatch({type: 'CLEAR_USERS'})} className="btn btn-ghost btn-lg">Clear</button>
+                <button onClick={() => dispatch({type: 'CLEAR_USERS'})} className="btn btn-ghost btn-lg">Clear</button>
             </div>
         )}
     </div>
